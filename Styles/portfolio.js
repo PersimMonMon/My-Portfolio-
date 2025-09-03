@@ -6,6 +6,6 @@ const myName = new SplitType('#display-name');
 gsap.to('.char', {
     y: 0,
     stagger: 0.05,
-    delay: 0.1,
-    duration: .1
+    delay: 0.001,
+    duration: .001
 })
