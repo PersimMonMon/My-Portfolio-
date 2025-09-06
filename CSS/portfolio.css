@@ -15,15 +15,29 @@ body {
     padding: 0px;
 }
 
+.container{
+  max-width: 1300px;   /* adjust to your taste */
+  margin: 0 auto;      /* centers the inner content */
+  padding: 0 24px;     /* inner side padding */
+}
+
 header {
     background-color: rgba(3, 3, 3, 0.25);
     position: fixed;
     width: 100%;
-    display: flex;
-    padding: 17px;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 10; /* HIGHER than hero background */
+    padding: 17px 0;  /* remove side padding here */
+    z-index: 10;
+}
+
+.header-inner{
+  display: flex;
+  justify-content: space-between;  /* name left, nav right */
+  align-items: center;
+}
+
+.header-buttons{
+  display: flex;
+  gap: 14px;
 }
 
 #display-name {
@@ -31,7 +45,7 @@ header {
     color: white;
 }
 
-.header-button, #display-name {
+.header-button, #display-name, main {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 20px;
@@ -47,10 +61,6 @@ header {
 .char {
     transform: translateY(50px);
     transition: transform 0.5s
-}
-
-main {
-    text-align: center;
 }
 
 .hero {
@@ -85,6 +95,7 @@ main {
     z-index: 1; /* above background */
     max-width: 600px;
     padding: 2rem;
+    text-align: center;
 }
 
 .hero-content h2 {
@@ -105,4 +116,8 @@ main {
     line-height: 1.5;
     max-width: 550px;
     margin: 0 auto;
+}
+
+#project-text {
+    font-size: 25px;
 }
